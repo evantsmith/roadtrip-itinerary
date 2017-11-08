@@ -2,9 +2,9 @@ var express = require('express');
 
 var app = express();
 
-app.use(express.static('./public/css'));
+app.use(express.static('./public'));
 
-app.get('/San-Francisco', function(request,response){
+app.get('/', function(request,response){
     response.sendFile('./public/html/sf-1.html',{root: './'});
 });
 
